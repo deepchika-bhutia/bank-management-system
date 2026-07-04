@@ -29,18 +29,18 @@ Welcome to the Bank Management System, a Python-based command-line application d
 
 ## Flowchart
 
-```mermaid
-flowchart TD
-    A[Sign In / Sign Up] --> B{Check if User is Registered}
-    B -- No --> C[User Registration]
-    B -- Yes --> D{Banking Facilities}
-    D -- Account Details --> E[Account Management]
-    D -- Transactions --> F[Money]
-    E --> E1[Account Details Update]
-    E --> E2[Transaction History]
-    E --> E3[Balance Enquiry]
-    F -- Same Account --> F1[Credit / Withdraw]
-    F -- Another Account --> F2[Send Money]
+```
+Sign In / Sign Up
+└── Check if User is Registered?
+    ├── No  -> User Registration
+    └── Yes -> Banking Facilities
+              ├── Account Details -> Account Management
+              │                      ├── Account Details Update
+              │                      ├── Transaction History
+              │                      └── Balance Enquiry
+              └── Transactions -> Money
+                                  ├── Same Account    -> Credit / Withdraw
+                                  └── Another Account -> Send Money
 ```
 
 ## Getting Started
